@@ -3,6 +3,7 @@ package com.example.diotodofinal.ui
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.diotodofinal.adapter.TaskListAdapter
 import com.example.diotodofinal.databinding.ActivityMainBinding
@@ -47,7 +48,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateList() {
-        adapter.submitList(TaskDataSource.getList())
+        val list = TaskDataSource.getList()
+        if (list.isEmpty()) {
+            binding.noTasksAdded.visibility = View.VISIBLE
+        } else {
+            binding.noTasksAdded.visibility = View.GONE
+        }
+        adapter.submitList(list)
     }
 
     companion object {
