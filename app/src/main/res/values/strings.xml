@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">DIOTODOFINAL</string>
+    <string name="app_name">TODO List - ;)</string>
+    <string name="create_task">Create Task</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="cancel">Cancel</string>
+    <string name="editar">Editar</string>
+    <string name="delete">Delete</string>
 </resources>
